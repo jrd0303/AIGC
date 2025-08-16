@@ -1,0 +1,105 @@
+/* wxss */
+page {
+  background-color: rgb(196, 223, 171);
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header-bg {
+  position: relative;
+  height: 40%;
+  overflow: hidden;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* wxss */
+/* 新增标题组样式 */
+.title-group {
+  position: absolute;
+  top: 50%;       /* 垂直居中 */
+  left: 50%;     /* 水平居中 */
+  transform: translate(-50%, -50%); /* 精确居中 */
+  width: 80%;    /* 限制最大宽度 */
+  text-align: center;
+}
+
+/* 统一标题样式 */
+.title {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  margin: 8px 0; /* 行间距 */
+}
+
+/* 分级字号设置 */
+.title-main {
+  font-size: 24px;
+}
+
+.title-sub {
+  font-size: 18px;
+}
+
+.title-desc {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* 下半部分 - 关键修改 */
+.content-area {
+  flex: 1;          /* &#9989; 自动填充剩余空间 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;       /* &#10060; 移除内边距避免挤压 */
+}
+
+.custom-swiper {
+  width: 100%;      /* &#9989; 宽度占满父容器 */
+  height: 100%;     /* &#9989; 高度占满父容器 */
+  border-radius: 0; /* &#11093; 可选：去掉圆角 */
+  box-shadow: none; /* &#11093; 可选：去掉阴影 */
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* &#9989; 关键：等比例裁剪填充 */
+}
+
+.leaf-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.btn-text {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0.8);
+  transition: transform 0.2s;
+}
+
+.continue-btn:hover .btn-text::after {
+  transform: scaleX(1);
+}

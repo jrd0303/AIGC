@@ -1,0 +1,68 @@
+/* pages/我的/我的.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.view1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 111.54rpx 0 196.15rpx;
+  background-color: rgb(196, 223, 171);
+  width: 100%;
+  height: 100%;
+}
+.view2{
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  padding: 288.46rpx 34.62rpx 19.23rpx;
+  background-image: url('https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%88%91%E7%9A%84/%E4%B8%8A%E5%9B%BE.png?sign=54aee96b29e516c9f1e4aaf468769e82&t=1754856898');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.view3{
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 288.46rpx 34.62rpx 19.23rpx;
+  background-image: url('https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%88%91%E7%9A%84/%E8%83%8C%E6%99%AF%E5%9B%BE.png?sign=3944ffb92e1a8435066eef2e8edd139a&t=1754856957');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.7; 
+}
+.view4{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 73.08rpx 46.15rpx 84.62rpx;
+  background-image: linear-gradient(90deg, rgb(224, 227, 204) 0%, rgba(247, 255, 199, 0.08) 100%);
+  border-radius: 30.77rpx;
+  box-shadow: 7.69rpx 7.69rpx 7.69rpx rgba(0, 0, 0, 0.25) inset;
+  border-left: solid 3.85rpx rgb(88, 133, 82);
+  border-right: solid 3.85rpx rgb(88, 133, 82);
+  border-top: solid 3.85rpx rgb(88, 133, 82);
+  border-bottom: solid 3.85rpx rgb(88, 133, 82);
+  margin-top: 0;
+  margin-top: 48.08rpx;
+}
+
+.font_2 {
+  font-size: 40rpx;
+  font-family: SourceHanSansCN;
+  line-height: 35.65rpx;
+  color: rgb(0, 0, 0);
+}
+.ml-87 {
+  margin-left: 167.31rpx;
+}
+.circle-image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: block;
+  background-color: #f0f0f0;
+}

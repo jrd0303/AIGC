@@ -1,0 +1,63 @@
+<!--pages/index/index.wxml-->
+<view class="flex-col page">
+  <view class="flex-col group" style="height: 1240rpx; display: flex; box-sizing: border-box">
+    <view class="flex-col section" style="height: 239rpx; display: flex; box-sizing: border-box; position: relative; left: 4rpx; top: 35rpx" bind:tap="change">
+      <text class="self-start font">心灵寄语</text>
+      <view class="flex-col justify-start self-stretch mt-24">
+        <view class="flex-col justify-start items-center group_2 text-container">
+          <text class="font_4 text_2">{{randomText}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="flex-col justify-start relative group_3">
+      <view class="flex-col items-start section_2" bind:tap="clickMe" style="position: relative; left: 0rpx; top: 25rpx">
+        <text class="font">今日情绪状态</text>
+        <text class="font_3 text_6 mt-36" style="position: relative; left: 149rpx; top: -31rpx">{{message1}}</text>
+      </view>
+      <image style="position: absolute; left: 529rpx; top: 96rpx" class="image pos_2" src="{{moodicon}}"/>
+    </view>
+    <view class="flex-col section_3" style="height: 299rpx; display: flex; box-sizing: border-box; position: relative; left: 4rpx; top: 20rpx">
+      <text class="self-center font">林间小憩</text>
+      <view class="flex-row equal-division mt-12">
+        <view class="flex-col items-center group_4 equal-division-item" bind:tap="ToMusic" data-id="001" >
+          <image class="image_2" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E9%A6%96%E9%A1%B5/%E6%B5%81%E6%B0%B4.png?sign=c4c5ad7eb7cc8922213818250089b0cf&t=1754853717" />
+          <text class="font_4 mt-12">流水</text>
+        </view>
+        <view class="flex-col items-center group_4 equal-division-item"  bind:tap="ToMusic" data-id="002">
+          <image
+            class="image_2" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E9%A6%96%E9%A1%B5/%E9%9B%A8%E5%A3%B0.png?sign=ffa2e1c4176cec8e127ee38e7098d6b6&t=1754853730" />
+          <text class="font_4 mt-12">雨声</text>
+        </view>
+        <view class="flex-col items-center group_4 equal-division-item"  bind:tap="ToMusic" data-id="003">
+          <image
+            class="image_2" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E9%A6%96%E9%A1%B5/%E9%B8%9F.png?sign=b3f7a7315c60a0615bd6a6988d0353c4&t=1754853758"/>
+          <text class="font_4 mt-12">鸟鸣</text>
+        </view>
+        <view class="flex-col items-center group_4 equal-division-item"  bind:tap="ToMusic" data-id="004">
+          <image
+            class="image_2" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E9%A6%96%E9%A1%B5/%E9%A3%8E.png?sign=d877e1b7318eda679f7487575eda28db&t=1754853769"/>
+          <text class="font_4 mt-12">风声</text>
+        </view>
+      </view>
+    </view>
+    <view class="flex-col section_4" style="height: 443rpx; display: flex; box-sizing: border-box; position: relative; left: 4rpx; top: 24rpx">
+      <text class="self-center font">晴雨测试</text>
+      <view class="flex-col self-stretch mt-16">
+        <view class="flex-row justify-between" style="height: 60rpx; display: flex; box-sizing: border-box">
+          <view class="section_5" bind:tap="ToTest" data-id="001">焦虑自评量表</view>
+          <view class="section_5 view" bind:tap="ToTest" data-id="002">抑郁自评量表</view>
+        </view>
+        <view class="flex-col mt-24">
+          <view class="flex-row justify-between self-stretch">
+            <view class="section_5" bind:tap="ToTest" data-id="003">压力小测试</view>
+            <view class="section_5 view_2" bind:tap="ToTest" data-id="004">PHQ-9</view>
+          </view>
+          <view class="flex-col justify-start self-start group_5 mt-16 font_3">
+              <view class="left-align">没有标准答案的成长问卷</view>
+              <view class="right-align" style="width: 597rpx; display: block; box-sizing: border-box">————让测试悄悄告诉你内心的天气</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

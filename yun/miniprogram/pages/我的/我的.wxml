@@ -1,0 +1,29 @@
+<!--pages/我的/我的.wxml-->
+<view class="view1" style="display: flex; box-sizing: border-box">
+  <view class="view2" style="position: absolute; left: 9rpx; top: 0rpx; height: 487rpx; display: flex; box-sizing: border-box; width: 735rpx">
+  <!-- 头像昵称区域 -->
+  <view>
+    <image class="circle-image" src="{{avatar_src}}" style="position: relative; left: 0rpx; top: -52rpx"></image>
+    <text style="position: relative; left: 241rpx; top: -172rpx">{{nickName}}</text>
+  </view>
+</view>
+  <view class="view3" style="position: relative; left: 19rpx; top: 375rpx; height: 802rpx; display: flex; box-sizing: border-box; width: 714rpx">
+    <view class="view4" style="position: relative; left: -8rpx; top: -314rpx; width: 660rpx; height: 158rpx; display: flex; box-sizing: border-box" bind:tap="ToInfo">
+    <text class="font_2" style="position: relative; left: 18rpx; top: 6rpx; width: 220rpx; height: 47rpx; display: block; box-sizing: border-box">个人信息</text>
+    <image style="width: 87rpx; height: 83rpx; display: block; box-sizing: border-box; left: 25rpx; top: 27rpx" class="ml-87" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%88%91%E7%9A%84/%E7%AE%AD%E5%A4%B4.png?sign=439d7c3843094fd4badee68b0b23bed7&t=1754856994"/>
+    </view>
+    <view class="view4" style="position: relative; left: -8rpx; top: -337rpx; width: 660rpx; height: 159rpx; display: flex; box-sizing: border-box" bind:tap="ToDiary">
+    <text class="font_2" style="position: relative; left: 18rpx; top: 6rpx; width: 220rpx; height: 47rpx; display: block; box-sizing: border-box">我的日记</text>
+    <image style="width: 87rpx; height: 83rpx; display: block; box-sizing: border-box; left: 25rpx; top: 27rpx" class="ml-87" src="https://636c-cloud1-6g247k6w9e33102b-1331005316.tcb.qcloud.la/3.png?sign=fa242ba49dabca26822c75e5c256f222&t=1754574161"/>
+    </view>
+    <view class="view4" style="position: relative; left: -8rpx; top: -361rpx; width: 660rpx; height: 158rpx; display: flex; box-sizing: border-box" bind:tap="ToTest">
+    <text class="font_2" style="position: relative; left: 18rpx; top: 6rpx; width: 220rpx; height: 47rpx; display: block; box-sizing: border-box">评测结果</text>
+    <image style="width: 87rpx; height: 83rpx; display: block; box-sizing: border-box; left: 25rpx; top: 27rpx" class="ml-87" src="https://636c-cloud1-6g247k6w9e33102b-1331005316.tcb.qcloud.la/3.png?sign=fa242ba49dabca26822c75e5c256f222&t=1754574161"/>
+    </view>
+    <view class="view4" style="position: relative; left: -8rpx; top: -383rpx; width: 660rpx; height: 158rpx; display: flex; box-sizing: border-box" bind:tap="ToPrivacy">
+    <text class="font_2" style="position: relative; left: 24rpx; top: 6rpx; width: 254rpx; height: 47rpx; display: block; box-sizing: border-box">隐私与安全</text>
+    <image style="width: 87rpx; height: 83rpx; display: block; box-sizing: border-box; left: 25rpx; top: 27rpx" class="ml-87" src="https://636c-cloud1-6g247k6w9e33102b-1331005316.tcb.qcloud.la/3.png?sign=fa242ba49dabca26822c75e5c256f222&t=1754574161"/>
+    </view>
+    <image class="fixed-bottom-image" src="https://636c-cloud1-6g247k6w9e33102b-1331005316.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250807213834_23.png?sign=c7f82821f093e0773d5b08f255b76606&t=1754578585" mode="widthFix"></image>
+  </view>
+</view>

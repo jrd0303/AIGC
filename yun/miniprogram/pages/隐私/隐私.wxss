@@ -1,0 +1,97 @@
+/* 基础样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff; /* 纯白背景 */
+  padding: 20px;
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 轻微阴影 */
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333; /* 深灰色 */
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+/* 目录导航栏（吸顶） */
+.chapter-nav {
+  white-space: nowrap; /* 禁止换行 */
+  border-bottom: 1px solid #f0f0f0; /* 分割线 */
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #666666; /* 灰色 */
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #007aff; /* 微信蓝 */
+  border-bottom: 2px solid #007aff; /* 高亮下划线 */
+}
+
+/* 政策正文 */
+.policy-content {
+  flex: 1;
+  height: calc(100vh - 120px); /* 扣除头部和导航栏高度 */
+  overflow: hidden;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50; /* 深蓝灰 */
+  margin-bottom: 10px;
+}
+
+.subsection {
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  margin: 10px 0;
+}
+
+.policy-text {
+  display: block;
+  font-size: 14px;
+  line-height: 1.8; /* 宽松行距 */
+  color: #555555; /* 中灰 */
+  text-align: justify; /* 两端对齐 */
+  margin-bottom: 8px;
+}
+
+/* 联系信息特殊样式 */
+.policy-text.contact {
+  color: #007aff; /* 蓝色链接色 */
+  word-break: break-all; /* 强制换行 */
+}

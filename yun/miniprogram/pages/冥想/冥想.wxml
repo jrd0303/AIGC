@@ -1,0 +1,6 @@
+<image style="position: relative; left: -1rpx; top: -112rpx" class="background-image" src="{{bg_img_src}}"/>
+<text class="text pos">{{name}}</text>
+<text class="font pos_2">{{message}}</text>
+<text class="font text_2 pos_3" style="width: 256rpx; height: 64rpx; display: block; box-sizing: border-box; left: 181rpx; top: 1023rpx; position: absolute">{{time}}/{{all_time}}</text>
+<image class="image_2 pos_4" src="{{play_src}}" bind:tap="play"/>
+<image style="width: 100rpx; height: 100rpx; display: block; box-sizing: border-box; left: 465rpx; top: 1088rpx" class="image_3 pos_5" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E5%86%A5%E6%83%B3/%E5%BC%80%E5%85%B3%20(2).png?sign=10665bdd61f8d1a2e0f76a1dae67ef34&t=1754515190" bind:tap="goTohome"/>

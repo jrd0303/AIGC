@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 上半部分：彩色日历 -->
+  <view class="calendar-section" style="width: 675rpx; display: block; box-sizing: border-box">
+    <view class="header">
+      <text class="month">{{currentMonth}}</text>
+      <text class="year">{{currentYear}}</text>
+    </view>
+    <view class="weekdays">
+      <text class="weekday" wx:for="{{['日','一','二','三','四','五','六']}}">{{item}}</text>
+    </view>
+    <view class="date-grid">
+      <block wx:for="{{days}}" wx:key="index">
+        <view class="day-cell {{item.isSelected ? 'selected' : ''}}" bindtap="selectDate" data-day="{{item.day}}" style="background-color: {{item.color}};">
+          <text class="day-number" style="color: {{item.color ? '#333' : 'transparent'}};">{{item.valid ? item.day : ''}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 下半部分：联动文字区 -->
+  <view class="content-box" bind:tap="ToRecord">
+    <image class="bg-image" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%88%97%E8%A1%A8/bg_img2.png?sign=07397db4281d5cfac3ed7d7888e50cd3&t=1754854822" mode="scaleToFill" style="height: 635rpx; display: block; box-sizing: border-box; left: -7rpx; top: -22rpx; width: 681rpx; position: absolute"></image>
+    <text class="display-text" style="position: relative; left: -150rpx; top: -89rpx; width: 472rpx; height: 125rpx; display: block; box-sizing: border-box">{{currentDay}}</text>
+    <text class="display-text" style="position: relative; left: -8rpx; top: -243rpx; width: 608rpx; display: block; box-sizing: border-box; height: 387rpx">{{currentText}}</text>
+  </view>
+</view>

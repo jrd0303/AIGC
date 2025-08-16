@@ -1,0 +1,100 @@
+<view class="container">
+  <!-- 顶部导航栏 -->
+  <view class="header">
+    <text class="title" style="position: relative; left: 199rpx; top: -24rpx">用户隐私保护政策</text>
+    
+  </view>
+
+  <!-- 目录导航（吸顶效果） -->
+  <scroll-view class="chapter-nav" scroll-x="true" scroll-into-view="{{currentChapter}}">
+    <block wx:for="{{chapters}}" wx:key="index">
+      <view 
+        id="{{item.id}}" 
+        class="nav-item {{currentChapter === item.id ? 'active' : ''}}" 
+        bindtap="jumpToChapter" 
+        data-id="{{item.id}}"
+      >
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 政策正文 -->
+  <scroll-view class="policy-content" scroll-y="true" scroll-into-view="{{currentSectionId}}">
+    <!-- 第一章：引言 -->
+    <view class="section" id="section1">
+      <text class="section-title">一、引言</text>
+      <text class="policy-text">欢迎您使用 **[XX小程序名称]**！本政策由 **[XX公司名称]**（注册地址：[XX省XX市XX区XX路XX号]，以下简称“我们”）制定...</text>
+    </view>
+
+    <!-- 第二章：我们收集的信息 -->
+    <view class="section" id="section2">
+      <text class="section-title">二、我们收集的信息</text>
+      <view class="subsection">
+        <text class="subtitle">1. 您主动提供的信息</text>
+        <text class="policy-text">- 账号注册信息：当您注册或登录账号时，需提供昵称、头像、手机号码等信息；若您选择绑定第三方账号（如微信），我们将获取您在该第三方平台的公开信息（如OpenID、UnionID）。</text>
+        <text class="policy-text">- 交易及服务信息：若您使用付费服务或参与活动，需提供支付相关信息（如订单号、交易金额）及收货地址等。</text>
+        <text class="policy-text">- 反馈与投诉信息：当您向我们提交意见反馈或投诉时，需提供联系方式及具体内容。</text>
+      </view>
+      <view class="subsection">
+        <text class="subtitle">2. 我们自动收集的信息</text>
+        <text class="policy-text">- 设备信息：包括设备型号、操作系统版本、唯一设备标识符（如IMEI、IDFA）、MAC地址、IP地址等。</text>
+        <text class="policy-text">- 日志信息：包括您的浏览记录、点击行为、访问时长、页面跳转路径等操作日志。</text>
+        <text class="policy-text">- 位置信息：仅在您授权后收集粗略位置（如城市级别）或精确位置（如GPS定位），用于本地生活服务推荐。</text>
+        <text class="policy-text">- 相机/相册权限：若您使用扫码、拍照或图片上传功能，我们将调用设备摄像头或访问您的相册。</text>
+      </view>
+    </view>
+
+    <!-- 第三章：信息的用途 -->
+    <view class="section" id="section3">
+      <text class="section-title">三、信息的用途</text>
+      <text class="policy-text">我们严格遵守“合法、正当、必要”原则，仅将您的信息用于以下目的：</text>
+      <text class="policy-text">1. 提供服务：包括账号管理、身份验证、消息推送、订单处理、客户服务等基础功能。</text>
+      <text class="policy-text">2. 优化体验：通过分析日志信息改进产品功能、修复漏洞、提升用户体验。</text>
+      <text class="policy-text">3. 安全保障：检测风险操作（如异常登录）、防范欺诈行为、保障账号安全。</text>
+      <text class="policy-text">4. 营销与推荐：基于您的偏好数据推送个性化内容（如优惠活动），您可通过设置关闭定向推送。</text>
+      <text class="policy-text">5. 法律合规：履行法律法规要求的义务（如实名制、反洗钱核查）。</text>
+    </view>
+
+    <!-- 第四章：信息的共享与披露 -->
+    <view class="section" id="section4">
+      <text class="section-title">四、信息的共享与披露</text>
+      <text class="policy-text">我们承诺不会向第三方出售您的个人信息，仅在以下情形共享：</text>
+      <text class="policy-text">1. 合作服务商：为完成支付、物流、数据分析等功能，向具备资质的第三方服务商提供必要信息（如支付宝、顺丰）。</text>
+      <text class="policy-text">2. 法律法规要求：因司法调查、行政机关命令等需披露时，我们会严格限制披露范围。</text>
+      <text class="policy-text">3. 业务转让：若发生合并、收购或资产转让，我们会要求新主体继续履行本政策义务。</text>
+      <text class="policy-text">4. 获得授权：经您明确同意后（如参与第三方活动时主动授权）。</text>
+    </view>
+
+    <!-- 第五章：您的权利 -->
+    <view class="section" id="section5">
+      <text class="section-title">五、您的权利</text>
+      <text class="policy-text">您对个人信息享有以下权利：</text>
+      <text class="policy-text">1. 访问与更正：可通过【设置-个人信息】查看并修改您的资料。</text>
+      <text class="policy-text">2. 删除账号：在【设置-账号安全】中申请注销账号，我们将停止使用并删除您的信息（法律另有规定的除外）。</text>
+      <text class="policy-text">3. 撤回同意：通过【设置-隐私设置】关闭特定权限（如位置、推送），不影响已发生的业务处理。</text>
+      <text class="policy-text">4. 投诉与响应：若您认为您的权益受损，可通过客服邮箱 [service@xx.com] 或电话 [400-XXX-XXXX] 联系我们，我们将在15个工作日内答复。</text>
+    </view>
+
+    <!-- 第六章：未成年人保护 -->
+    <view class="section" id="section6">
+      <text class="section-title">六、未成年人保护</text>
+      <text class="policy-text">若您是未满18周岁的未成年人，请在监护人陪同下使用本小程序。我们不会主动收集未成年人个人信息，若发现未经监护人同意的儿童账号，将采取措施终止服务。</text>
+    </view>
+
+    <!-- 第七章：政策的更新 -->
+    <view class="section" id="section7">
+      <text class="section-title">七、政策的更新</text>
+      <text class="policy-text">我们可能会根据业务发展或法律变化更新本政策。更新后将在小程序首页公示或通过推送通知您。若您继续使用本小程序，视为接受新版本政策。</text>
+    </view>
+
+    <!-- 第八章：联系我们 -->
+    <view class="section" id="section8">
+      <text class="section-title">八、联系我们</text>
+      <text class="policy-text">若您对本政策有任何疑问或建议，请联系：</text>
+      <text class="policy-text">- 客服邮箱：[service@xx.com]</text>
+      <text class="policy-text">- 客服电话：[400-XXX-XXXX]</text>
+      <text class="policy-text">- 公司地址：[XX省XX市XX区XX路XX号]</text>
+    </view>
+  </scroll-view>
+</view>

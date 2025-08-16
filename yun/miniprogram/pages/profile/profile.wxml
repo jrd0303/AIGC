@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 头像上传 -->
+  <view class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+    <image  class="avatar" src="{{avatarUrl}}" style="position: relative; left: 245rpx; top: 0rpx; width: 220rpx; height: 218rpx; display: inline-block; box-sizing: border-box"></image>
+  </view>
+  
+
+  <!-- 个人信息表单 -->
+  <form bindsubmit="formSubmit">
+    <view class="form-section" style="position: relative; left: 0rpx; top: 89rpx">
+      <text class="section-title">基本信息</text>
+      
+      <view class="form-item">
+        <text class="label">昵称</text>
+        <input type="nickname" name="nickname" value="{{nickname}}" class="input" placeholder="请输入昵称"  placeholder-class="placeholder"/>
+      </view>
+      
+      <view class="form-item">
+        <text class="label">性别</text>
+        <picker name="gender" value="{{genderIndex}}" range="{{genders}}" bindchange="bindGenderChange">
+          <view class="picker">{{genders[genderIndex]}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-item">
+        <text class="label">生日</text>
+        <picker name="birthday" mode="date" value="{{userInfo.birthday}}" bindchange="bindDateChange">
+          <view class="picker">{{userInfo.birthday || '请选择生日'}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form-section" style="position: relative; left: 0rpx; top: 97rpx">
+      <text class="section-title">个人简介</text>
+      <textarea style="position: relative; left: 0rpx; top: 1rpx" 
+        name="bio" 
+        value="{{userInfo.bio}}" 
+        placeholder="介绍一下自己吧..." 
+        class="textarea"
+        placeholder-class="placeholder"
+        maxlength="100"
+      />
+    </view>
+
+    <!-- 提交按钮 -->
+    <button formType="submit" class="submit-btn" style="position: relative; left: 0rpx; top: 77rpx">保存修改</button>
+  </form>
+</view>

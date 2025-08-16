@@ -1,0 +1,39 @@
+<!--pages/chat/chat.wxml-->
+<!--pages/voice_api/voice_api.wxml-->
+<!--发送信息-->
+<view class="parent">
+<view class="footer">
+  <view class="row">
+    <view class="input-box">
+    <textarea class="text-area"placeholder-class="placeholder"show-confirm-bar="{{false}}"cursor-spacing="30"maxlength="500"disable-default-padding="{{true}}"confirm-hold="{{true}}"hold-keyboard="{{true}}"auto-height="false"placeholder="输入信息"bindinput="inputClick"value="{{content}}"></textarea>
+    </view>
+    <view class="send-btn"wx:if="{{content!=''}}">
+            <text class="send-text" bindtap="sendClick">发 送</text>
+        </view>
+  </view>
+</view>
+<!-- 展示消息界面 -->
+
+<view class="scroll-list" style="width: 712rpx; height: 372rpx; display: block; box-sizing: border-box; left: 33rpx; top: 0rpx; position: fixed">
+    <block wx:for="{{chatList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+      <!-- 显示时间 -->
+      <view wx:if="{{item.date}}" class="show-date">{{item.date}}</view>
+      <view class="{{User.id==item.id?'row row-self':'row'}}" style="width: 664rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+        <!-- 显示头像 -->
+        <view class="{{User.id==item.id?'head-self':'head-friend'}}">
+                <image class="avatar" src="{{item.avatar}}" style="position: relative; left: 22rpx; top: 58rpx"></image>
+        </view>
+        <view>
+          <!-- 显示用户名 -->
+          <view wx:if="{{User.id!=item.id}}" class="nick" style="position: relative; left: 22rpx; top: 33rpx">{{item.name}}</view>
+          <!-- 显示消息 -->
+          <view class="{{User.id==item.id?'message msg-self':'message msg-friend'}}" style="position: relative; left: 24rpx; top: 54rpx">
+            <text>{{item.message}}</text>
+          </view>
+        </view> 
+      </view>
+    </block>
+  </view>
+  <image class="fixed-bg" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/chat/bg_img4.png?sign=ef05546c5c3f2e63731622c8705bd3fc&t=1754857860" mode="scaleToFill">
+</image>
+</view>

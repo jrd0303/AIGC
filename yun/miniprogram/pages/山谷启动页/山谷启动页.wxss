@@ -1,0 +1,76 @@
+/* pages/山谷启动页/山谷启动页.wxss */
+
+page {
+  font-size: 0; 
+}
+
+.page-bg {
+  background-color: rgb(196, 223, 171);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  top: 20rpx; 
+  left: 20rpx; 
+  right: 20rpx; 
+  bottom: 20rpx;
+  overflow: hidden; 
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.title {
+  position: absolute;
+  top: 80rpx; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36rpx;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 0 2rpx 4rpx rgba(255,255,255,0.8);
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.enter-btn {
+  bottom: calc(160rpx + env(safe-area-inset-bottom, 0));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280rpx;
+  height: 80rpx;
+  background: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  transition: all 0.3s ease;
+}
+.btn-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+}
+.btn-text {
+  flex: 1;
+  text-align: center;
+}

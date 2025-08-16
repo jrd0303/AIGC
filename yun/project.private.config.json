@@ -1,0 +1,114 @@
+{
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false,
+    "coverView": true,
+    "lazyloadPlaceholderEnable": false,
+    "skylineRenderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "showShadowRootInWxmlPanel": true,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true,
+    "bigPackageSizeSupport": false,
+    "useIsolateContext": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/testlist/testlist",
+          "pathName": "pages/testlist/testlist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/日历列表/日历列表",
+          "pathName": "pages/日历列表/日历列表",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/日历列表/日历列表",
+          "pathName": "pages/日历列表/日历列表",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/日历记录/日历记录",
+          "pathName": "pages/日历记录/日历记录",
+          "query": "\"openid\": \"7886\"",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/我的/我的",
+          "pathName": "pages/我的/我的",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/testlist/testlist",
+          "pathName": "pages/testlist/testlist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/日历入口/日历入口",
+          "pathName": "pages/日历入口/日历入口",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/隐私/隐私",
+          "pathName": "pages/隐私/隐私",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/测试/测试",
+          "pathName": "pages/测试/测试",
+          "query": "id=001",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/冥想/冥想",
+          "pathName": "pages/冥想/冥想",
+          "query": "id=004",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/首页/首页",
+          "pathName": "pages/首页/首页",
+          "query": "id=”001“",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "yun",
+  "libVersion": "3.9.0"
+}

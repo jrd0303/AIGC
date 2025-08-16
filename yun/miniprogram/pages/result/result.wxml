@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 头部标题 -->
+  <view class="header">
+    <text class="title">心情晴雨指数</text>
+  </view>
+
+  <view class="score-ring {{getRingClass()}}" style="--progress: {{progress}}%">
+    <view class="inner-circle">
+        <text class="score">{{score}}</text>
+    </view>
+</view>
+<!-- index.wxml
+  <!-- 结果描述与建议 -->
+  <view class="result-content">
+    <text class="result-desc">{{resultDescription}}</text>
+    <view class="advice-section">
+      <text class="advice-title">一些小建议：</text>
+      <view class="advice-list">
+        <block wx:for="{{adviceList}}" wx:key="index">
+          <text class="advice-item">{{adviceList[index]}}</text>
+        </block>
+        <button class="ToTestList-btn" style="position: relative; left: -1rpx; top: 222rpx" bind:tap="ToTestList">查看历史记录</button>
+      </view>
+    </view>
+  </view>
+</view>

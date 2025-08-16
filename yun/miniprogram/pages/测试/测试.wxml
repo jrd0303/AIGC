@@ -1,0 +1,55 @@
+<view class="flex-col page">
+  <view class="container">
+  <!-- 问卷标题 -->
+  <view class="header">
+    <text class="title">{{questionnaire.name}}</text>
+    <view class="progress-container">
+      <text class="progress-text">{{currentIndex + 1}}/{{questionnaire.topics.length}}</text>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{progress + '%'}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 中部：测试说明文字 -->
+  <view class="instruction" style="height: 520rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -6rpx">
+    <text>{{description}}</text>
+  </view>
+
+    <!-- 当前题目 -->
+    <view class="question-container" wx:if="{{questionnaire.topics.length > 0}}">
+      <view class="question-header">
+        <text class="question-number">{{questionnaire.topics[currentIndex].number}}</text>
+        <text class="question-title">{{questionnaire.topics[currentIndex].title}}</text>
+      </view>
+
+      <!-- 选项列表 -->
+      <view class="options-container">
+        <block wx:for="{{questionnaire.topics[currentIndex].choices}}" wx:key="index">
+          <view 
+            class="option-item {{selectedAnswers[currentIndex] === index ? 'selected' : ''}}"
+            bindtap="selectOption" data-index="{{index}}" data-score="{{questionnaire.topics[currentIndex].score[index]}}">
+            <view class="option-selector">
+              <text wx:if="{{selectedAnswers[currentIndex] === index}}">✓</text>
+            </view>
+            <text class="option-text">{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 导航按钮 -->
+    <view class="navigation-buttons">
+      <button 
+        class="nav-btn prev" 
+        bindtap="prevQuestion"
+        disabled="{{currentIndex === 0}}"
+       style="height: 104rpx; display: block; box-sizing: border-box; left: -29rpx; top: 0rpx; position: relative">上一题</button>
+      
+      <button 
+        class="nav-btn next" 
+        bindtap="nextQuestion"
+       style="height: 100rpx; display: block; box-sizing: border-box; left: 20rpx; top: 0rpx; position: relative">{{currentIndex === questionnaire.topics.length - 1 ? '提交' : '下一题'}}</button>
+    </view>
+  </view>
+</view>

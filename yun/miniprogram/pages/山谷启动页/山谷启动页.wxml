@@ -1,0 +1,10 @@
+<!--pages/山谷启动页/山谷启动页.wxml-->
+<view class="page-bg"> <!-- 整页背景色 -->
+    <view class="image-container"> <!-- 图片容器（带内边距形成边框） -->
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E5%B1%B1%E8%B0%B7%E5%90%AF%E5%8A%A8/bg_img3.png?sign=9f0de762baa5fded7d5db126048317df&t=1754856745" class="bg" />
+    </view>
+    <view class="enter-btn" style="position: absolute; left: 376rpx; top: 1055rpx" bind:tap="ToChat">
+      <image style="width: 50rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 33rpx; top: 1rpx" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E5%B1%B1%E8%B0%B7%E5%90%AF%E5%8A%A8/button.png?sign=4a1e3f7f82ae0755db0497869838688d&t=1754854070" class="btn-icon" />
+      <text class="btn-text">进入山谷</text>
+    </view>
+</view>

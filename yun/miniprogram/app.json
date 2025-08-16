@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/首页/首页",
+    "pages/冥想/冥想",
+    "pages/测试/测试",
+    "pages/result/result",
+    "pages/我的/我的",
+    "pages/山谷启动页/山谷启动页",
+    "pages/chat/chat",
+    "pages/日历入口/日历入口",
+    "pages/日历记录/日历记录",
+    "pages/日历列表/日历列表",
+    "pages/隐私/隐私",
+    "pages/testlist/testlist",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "轻愈森林",
+    "navigationBarBackgroundColor": "#204a1b",
+    "backgroundColor": "#204a1bde",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#00BFFF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/首页/首页",
+        "text": "首页",
+        "iconPath": "/images/导航栏/首页(已点击).png",
+        "selectedIconPath": "/images/导航栏/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/山谷启动页/山谷启动页",
+        "text": "聊天",
+        "iconPath": "/images/导航栏/聊天.png",
+        "selectedIconPath": "/images/导航栏/聊天(已点击).png"
+      },
+      {
+        "pagePath": "pages/日历入口/日历入口",
+        "text": "日记",
+        "iconPath": "/images/导航栏/日记本.png",
+        "selectedIconPath": "/images/导航栏/日记本(已点击).png"
+      },
+      {
+        "pagePath": "pages/我的/我的",
+        "text": "我的",
+        "iconPath": "/images/导航栏/我的.png",
+        "selectedIconPath": "/images/导航栏/我的(已点击).png"
+      }
+    ]
+  }
+}

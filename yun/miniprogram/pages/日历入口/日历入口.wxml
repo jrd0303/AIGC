@@ -1,0 +1,24 @@
+<!-- wxml -->
+<view class="container">
+  <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%85%A5%E5%8F%A3/%E5%85%A5%E5%8F%A3%E4%B8%8A%E5%9B%BE.png?sign=d989be6de3282acbbd0d3e44f135e0f7&t=1754854894" class="bg-image" style="height: 268rpx; display: block; box-sizing: border-box; width: 708rpx; position: relative; left: 22rpx; top: 26rpx"></image>
+  <view class="title-group" style="position: absolute; left: 375rpx; top: 163rpx">
+      <view class="title title-main">欢迎来到苔痕日历</view>
+      <view class="title title-sub">你每一寸潮湿的心事</view>
+      <view class="title title-desc">都将在时光里蔓延成柔软的绿洲</view>
+    </view>  
+  <!-- 下半部分轮播图 -->
+    <swiper class="content-area custom-swiper" autoplay interval="3000" circular indicator-dots="true" indicator-active-color="#fff" >
+      <swiper-item>
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%85%A5%E5%8F%A3/%E5%BC%80%E5%BF%83.png?sign=f1af7e0f52a3a93060ad8d5053e6593d&t=1754854927" style="position: absolute; left: -6rpx; top: 29rpx; bottom: 20rpx; width: 724rpx; height: 1012rpx; display: block; box-sizing: border-box; right: 205rpx" mode="aspectFill" data-mood="001" bind:tap="ToWrite"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%85%A5%E5%8F%A3/%E5%B9%B3%E9%9D%99.png?sign=ed668fdb055c7c6e40bcaba3238dcf4d&t=1754854946" style="position: absolute; left: -6rpx; top: 29rpx; bottom: 20rpx; width: 724rpx; height: 1012rpx; display: block; box-sizing: border-box; right: 205rpx" mode="aspectFill" data-mood="002" bind:tap="ToWrite"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%85%A5%E5%8F%A3/%E6%B2%AE%E4%B8%A7.png?sign=2990040a9aa20790869d32a55b98a693&t=1754854969" style="position: absolute; left: -6rpx; top: 29rpx; bottom: 20rpx; width: 724rpx; height: 1012rpx; display: block; box-sizing: border-box; right: 205rpx" mode="aspectFill" data-mood="003" bind:tap="ToWrite"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E5%85%A5%E5%8F%A3/%E4%BC%A4%E5%BF%83.png?sign=816d82b2aee8820c779b19b681bfd781&t=1754854986" style="position: absolute; left: -6rpx; top: 29rpx; bottom: 20rpx; width: 724rpx; height: 1012rpx; display: block; box-sizing: border-box; right: 205rpx" mode="aspectFill" data-mood="004" bind:tap="ToWrite"></image>
+      </swiper-item>
+    </swiper>
+</view>

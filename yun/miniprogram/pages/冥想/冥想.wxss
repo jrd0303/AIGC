@@ -1,0 +1,63 @@
+page {
+  width:100%;
+  height: 100%;
+}
+.background-image {
+  /* 固定定位，覆盖整个屏幕 */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+/* 置于底层，确保内容在上面 */
+  z-index: -1;
+}
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 69.23rpx;
+  font-family: SourceHanSansCN;
+  line-height: 64.17rpx;
+}
+.pos {
+  position: absolute;
+  left: 103.67rpx;
+  top: 250.87rpx;
+}
+.font {
+  font-size: 38.46rpx;
+  font-family: SourceHanSansCN;
+  line-height: 35.77rpx;
+  color: rgb(0, 0, 0);
+}
+.pos_2 {
+  position: absolute;
+  left: 100.65rpx;
+  top: 375.46rpx;
+}
+.text_2 {
+  font-size:x-large;
+  line-height: 37.42rpx;
+}
+.pos_3 {
+  position: absolute;
+  left: 90.38rpx;
+  bottom: 406.19rpx;
+}
+.image_2 {
+  width: 100rpx;
+  height: 100rpx;
+}
+.pos_4 {
+  position: absolute;
+  left: 180.77rpx;
+  bottom: 265.38rpx;
+}
+.image_3 {
+  width: 90.38rpx;
+  height: 90.38rpx;
+}
+.pos_5 {
+  position: absolute;
+  right: 186.54rpx;
+  bottom: 267.31rpx;
+}

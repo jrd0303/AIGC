@@ -1,0 +1,154 @@
+/* pages/chat/chat.wxss */
+page {
+  background-color: rgb(196, 223, 171); 
+}
+.scroll-list {
+  position: fixed;
+  padding-bottom: 120rpx;
+  z-index: 2;
+}
+/* 显示时间 */
+.show-date {
+  text-align: center;
+  font-size: 24rpx;
+  padding: 15rpx 0;
+  color: gray;
+  z-index: 2;
+}
+/* 每行对话样式 */
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  z-index: 2
+}
+/* 提示信息 */
+.tips-text {
+  text-align: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: gray;
+  z-index: 2;
+}
+.row-self {
+  flex-direction: row-reverse;
+}
+/* 头像 */
+.head-self {
+  margin-left: 20rpx;
+  z-index: 2;
+}
+.head-friend {
+  margin-right: 20rpx;
+  z-index: 2;
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  z-index: 2;
+}
+.nick {
+  color: gray;
+  font-size: 24rpx;
+  margin-bottom: 15rpx;
+  z-index: 2;
+}
+/* 消息内容 */
+.message {
+  background-color: white;
+  font-size: 30rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  line-height: 45rpx;
+  z-index: 2;
+}
+.msg-self {
+  border-top-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  color: #434343;
+  background-image: linear-gradient(to right, #A8D89E80, #C4DFAB99);
+  border: 1rpx solid #000;
+  background-color: transparent; 
+  z-index: 2;
+}
+.msg-friend {
+  border-top-right-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  color: #434343;
+  background-image: linear-gradient(to right, #C4DFAB, #C4DFAB80);
+
+  border: 1rpx solid #000;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: white;
+  border-top: 1rpx solid #f1f1f1;
+  z-index: 2;
+}
+.input-box {
+  flex: 5;
+  border: 1rpx solid #f1f1f1;
+  border-radius: 10rpx;
+  box-shadow: 0 0 0 1rpx rgba(255, 255, 255, 0.5);
+  background: white; 
+  z-index: 2;
+}
+.send-btn {
+  flex: 1;
+  text-align: center;
+  margin-left: 10rpx;
+  color: white;
+  margin-top: 10rpx;
+  z-index: 2;
+}
+.send-text {
+  background-color: #8DBF7E99;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding: 12rpx 20rpx;
+  z-index: 2;
+}
+.text-area {
+  max-height: 180rpx;
+  width: 98%;
+  padding: 15rpx 10rpx;
+  font-size: 30rpx;
+  z-index: 2;
+}
+.placeholder {
+  font-size: 30rpx;
+  z-index: 2;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+  z-index: 2;
+}
+.fixed-bg {
+  position: fixed;
+  top: 20rpx;
+  left: 20rpx;
+  right: 20rpx; 
+  bottom: 130rpx;
+  width: auto; 
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.7
+}
+.parent {
+  position: relative; 
+}

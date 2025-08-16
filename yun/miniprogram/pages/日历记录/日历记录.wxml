@@ -1,0 +1,18 @@
+<!--pages/日历记录/日历记录.wxml-->
+<!--pages/diary/diary-2/diary-2.wxml-->
+<view class="page-bg"> <!-- 整页背景色 -->
+  <view class="input-wrapper" style="width: 674rpx; display: block; box-sizing: border-box; left: 39rpx; top: 39rpx; position: relative">
+    <textarea style="position: relative; left: 17rpx; top: 239rpx; height: 354rpx; display: block; box-sizing: border-box; width: 641rpx "  class="transparent-input" placeholder="记录此刻心情......" auto-height maxlength="500" bindinput="onInput"/>
+    <!-- 字数统计 -->
+    <view class="char-counter">
+      <text style="position: relative; left: 568rpx; top: 327rpx">{{charCount}}/{{maxLength}}</text>
+    </view>
+    <view class="enter-btn" style="position: absolute; left: 376rpx; top: 1055rpx" bind:tap="FinishWrite">
+      <image style="width: 50rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 41rpx; top: 0rpx" src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E8%AE%B0%E5%BD%95/button1.png?sign=247e0215272a79a1ec6e2d7a86513a4f&t=1754854585" class="btn-icon" />
+      <text class="btn-text">记录完成</text>
+    </view>
+  </view>
+    <view class="image-container"> <!-- 图片容器（带内边距形成边框） -->
+        <image src="https://636c-cloud1-2gdy76jt7b205f78-1372806986.tcb.qcloud.la/%E6%97%A5%E5%8E%86%E8%AE%B0%E5%BD%95/bg_img1.png?sign=abac0cfb7e9bf4f12db224c08db648ee&t=1754854528" class="bg" />
+    </view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/testlist/testlist.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">心理测试历史记录</text>
+  </view>
+
+  <scroll-view class="result-list" scroll-y>
+    <!-- 空状态提示（纯文字版） -->
+    <view wx:if="{{isEmpty}}" class="empty-container">
+      <text class="empty-text">暂无测试记录</text>
+    </view>
+
+    <!-- 测试结果列表 -->
+    <block wx:else>
+      <block wx:for="{{testResults}}" wx:key="_id">
+        <view class="result-item">
+          <view class="item-header">
+            <text class="test-name">{{item.name}}</text>
+            <text class="test-date">{{item.time}}</text>
+          </view>
+          
+          <view class="item-footer">
+            <text class="score">得分: {{item.score}}</text>
+            <text class="detail-link" bind:tap="ToTestResult" data-id='{{item.testid}}' data-score='{{item.score}}'>查看详情 ></text>
+          </view>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+</view>
